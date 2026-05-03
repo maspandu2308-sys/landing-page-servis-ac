@@ -219,6 +219,73 @@
             object-fit: cover;
         }
 
+        .hero-feature-card {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: white;
+            border-radius: 1rem;
+            padding: 0.875rem 1rem;
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.18);
+        }
+
+        .hero-feature-card .icon-box {
+            width: 3rem;
+            height: 3rem;
+            margin-bottom: 0;
+            border-radius: 0.75rem;
+        }
+
+        .hero-feature-card strong {
+            display: block;
+            color: #111827;
+            line-height: 1.1;
+        }
+
+        .hero-feature-card span {
+            color: #2563eb;
+            font-size: 0.875rem;
+        }
+
+        /* Social links */
+        .social-section {
+            padding: 3rem 0;
+            background: linear-gradient(to bottom, #fff, #f9fafb);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, 0.18);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 18px 30px rgba(15, 23, 42, 0.22);
+        }
+
+        .social-wa { background: #00c853; }
+        .social-ig { background: linear-gradient(135deg, #7c3aed, #ec4899); }
+        .social-fb { background: #1d4ed8; }
+        .social-email { background: #ef4444; }
+
         /* Section Styles */
         section {
             padding: 4rem 0;
@@ -306,20 +373,6 @@
             color: #6b7280;
         }
 
-        /* Gallery */
-        .gallery-video {
-            grid-column: span 2;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-            background: black;
-        }
-
-        .gallery-video video {
-            width: 100%;
-            height: auto;
-        }
-
         .gallery-img {
             position: relative;
             border-radius: 1rem;
@@ -347,6 +400,196 @@
             padding: 1rem;
             color: white;
             font-weight: 500;
+        }
+
+        .gallery-wide {
+            grid-column: span 3;
+        }
+
+        .gallery-wide img {
+            height: 420px;
+        }
+
+        /* Service, area, and testimonials */
+        .service-section {
+            background: linear-gradient(to bottom, #f9fafb, #fff);
+        }
+
+        .service-card {
+            min-height: 18rem;
+            border-color: #e5e7eb;
+            padding: 2rem;
+        }
+
+        .service-card .icon-box {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h4 {
+            font-size: 1.35rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .area-panel {
+            max-width: 64rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            border: 1px solid #bfdbfe;
+            border-radius: 1.25rem;
+            background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+        }
+
+        .area-panel .map-icon {
+            width: 4.75rem;
+            height: 4.75rem;
+            margin: 0 auto 1.5rem;
+            color: #2563eb;
+        }
+
+        .area-panel h4 {
+            color: #111827;
+            font-size: 1.65rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .area-panel p {
+            color: #4b5563;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 18px 32px rgba(15, 23, 42, 0.10);
+        }
+
+        .stars {
+            color: #f5b301;
+            font-size: 1.35rem;
+            letter-spacing: 0.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card blockquote {
+            color: #374151;
+            font-style: italic;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-person {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+        }
+
+        .testimonial-avatar {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-person strong {
+            display: block;
+            color: #111827;
+        }
+
+        .testimonial-person span {
+            color: #4b5563;
+            font-size: 0.9rem;
+        }
+
+        .price-note {
+            margin-top: 2rem;
+            border: 2px solid #fbbf24;
+            background: linear-gradient(135deg, #fffbeb, #fff7ed);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            box-shadow: 0 16px 30px rgba(251, 191, 36, 0.16);
+        }
+
+        .price-note .icon-box {
+            width: 3.5rem;
+            height: 3.5rem;
+            margin: 0;
+            color: #92400e;
+            background: #fbbf24;
+            flex: 0 0 auto;
+        }
+
+        .price-note h4 {
+            color: #111827;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-note p {
+            color: #374151;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8, #1e40af);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta h3 {
+            font-size: 2.5rem;
+            line-height: 1.15;
+            max-width: 62rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .final-cta p {
+            color: #dbeafe;
+            font-size: 1.25rem;
+            max-width: 44rem;
+            margin: 0 auto 2rem;
+        }
+
+        .final-cta-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            background: white;
+            color: #2563eb;
+        }
+
+        .btn-white:hover {
+            background: #eff6ff;
         }
 
         /* Stats */
@@ -389,11 +632,12 @@
             border-radius: 1rem;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             border: 1px solid #e5e7eb;
-            overflow: hidden;
+            overflow-x: auto;
         }
 
         .price-table table {
             width: 100%;
+            min-width: 680px;
             border-collapse: collapse;
         }
 
@@ -503,9 +747,52 @@
             list-style: none;
         }
 
-        footer li {
+            footer li {
             margin-bottom: 0.75rem;
             font-size: 0.875rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-social a {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 0.75rem;
+            background: #1f2937;
+            color: #d1d5db;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s, color 0.25s;
+        }
+
+        .footer-social a:hover {
+            background: #374151;
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
         }
 
         .bg-blue {
@@ -532,6 +819,33 @@
         @media (max-width: 768px) {
             .hide-mobile {
                 display: none;
+            }
+
+            .hero-feature-card {
+                position: static;
+                margin-top: 1rem;
+            }
+
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-wide {
+                grid-column: auto;
+            }
+
+            .gallery-wide img,
+            .gallery-img img {
+                height: 300px;
+            }
+
+            .final-cta h3 {
+                font-size: 2rem;
+            }
+
+            .price-table th,
+            .price-table td {
+                padding: 0.875rem;
             }
         }
     </style>
@@ -611,17 +925,62 @@
 
                 <div class="hero-img">
                     <img src="https://images.unsplash.com/photo-1546079406-046e141edf3d?w=1080" alt="Teknisi AC Profesional">
+                    <div class="hero-feature-card">
+                        <div class="icon-box">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20"></path>
+                                <path d="m17 5-5 5-5-5"></path>
+                                <path d="m17 19-5-5-5 5"></path>
+                                <path d="M2 12h20"></path>
+                                <path d="m5 7 5 5-5 5"></path>
+                                <path d="m19 7-5 5 5 5"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <strong>Servis AC</strong>
+                            <span>Bergaransi</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Social Media Icons -->
+    <section class="social-section">
+        <div class="container">
+            <div class="social-links">
+                <a class="social-icon social-wa" href="https://wa.me/6287825019502" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path>
+                    </svg>
+                </a>
+                <a class="social-icon social-ig" href="https://www.instagram.com/abadijaya.teknikac/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.406-1.683a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                    </svg>
+                </a>
+                <a class="social-icon social-fb" href="https://www.facebook.com/share/18KEr2G9yP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                </a>
+                <a class="social-icon social-email" href="mailto:ardi.sustanto@gmail.com" aria-label="Email">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <path d="m3 7 9 6 9-6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Keunggulan Layanan -->
-    <section>
+    <section id="tentang">
         <div class="container">
             <div class="section-header">
                 <h3>Kenapa Pilih Kami?</h3>
-                <p>Kami berkomitmen memberikan layanan terbaik dengan standar profesional tinggi</p>
+                <p>Kami berkomitmen memberikan layanan cepat, transparan, dan bergaransi</p>
             </div>
 
             <div class="grid grid-cols-3">
@@ -632,7 +991,7 @@
                         </svg>
                     </div>
                     <h4>Teknisi Berpengalaman</h4>
-                    <p>Tim teknisi profesional dan tersertifikasi dengan pengalaman bertahun-tahun</p>
+                    <p>Tim teknisi profesional dan berpengalaman bertahun-tahun</p>
                 </div>
 
                 <div class="card">
@@ -643,7 +1002,7 @@
                         </svg>
                     </div>
                     <h4>Respon Cepat</h4>
-                    <p>Kami datang dalam waktu singkat setelah pesanan diterima</p>
+                    <p>Tim kami hadir secepatnya setelah pesanan kami terima</p>
                 </div>
 
                 <div class="card">
@@ -653,8 +1012,8 @@
                             <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
                         </svg>
                     </div>
-                    <h4>Harga Transparan</h4>
-                    <p>Tidak ada biaya tersembunyi, harga jelas sejak awal</p>
+                    <h4>Harga Bersaing dan Transparan</h4>
+                    <p>Seluruh biaya diinformasikan secara transparan sejak awal, tanpa biaya tersembunyi</p>
                 </div>
 
                 <div class="card">
@@ -664,19 +1023,8 @@
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
                     </div>
-                    <h4>Panggilan ke Rumah</h4>
-                    <p>Teknisi datang langsung ke lokasi Anda, praktis dan mudah</p>
-                </div>
-
-                <div class="card">
-                    <div class="icon-box">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h4>Area Bantul & Sekitar</h4>
-                    <p>Melayani seluruh area Bantul dan sekitar Yogyakarta Selatan</p>
+                    <h4>Area Yogyakarta, Bantul, dan Sekitarnya</h4>
+                    <p>Melayani seluruh wilayah Bantul, Yogyakarta, dan sekitarnya</p>
                 </div>
 
                 <div class="card">
@@ -686,9 +1034,152 @@
                             <path d="M9 12l2 2 4-4"></path>
                         </svg>
                     </div>
-                    <h4>Bergaransi</h4>
+                    <h4>AC Dingin Bergaransi</h4>
                     <p>Garansi servis untuk memastikan hasil kerja yang berkualitas</p>
                 </div>
+
+                <div class="card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Siap Melayani 24 Jam</h4>
+                    <p>Layanan kami selalu siap kapan saja untuk Anda</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan Kami -->
+    <section id="layanan" class="service-section">
+        <div class="container">
+            <div class="section-header">
+                <h3>Layanan Kami</h3>
+                <p>Solusi lengkap untuk semua kebutuhan perawatan dan perbaikan AC Anda</p>
+            </div>
+
+            <div class="grid grid-cols-3">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 10h10"></path>
+                            <path d="M4 14h14"></path>
+                            <path d="M4 18h7"></path>
+                            <path d="M18 8a3 3 0 1 0-3-3"></path>
+                            <path d="M21 12a3 3 0 1 0-3-3"></path>
+                        </svg>
+                    </div>
+                    <h4>Cuci AC</h4>
+                    <p>Pembersihan menyeluruh indoor & outdoor unit untuk performa optimal</p>
+                </div>
+
+                <div class="card service-card">
+                    <div class="icon-box" style="background: #ecfeff; color: #0891b2;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 16.3c0 2 1.6 3.7 3.7 3.7s3.7-1.6 3.7-3.7c0-1.3-.7-2.4-1.5-3.4L10.7 10l-2.2 2.9C7.6 13.9 7 15 7 16.3z"></path>
+                            <path d="M13 8.3c0 1.5 1.2 2.7 2.7 2.7s2.7-1.2 2.7-2.7c0-.9-.5-1.8-1.1-2.5L15.7 4l-1.6 1.8c-.6.7-1.1 1.6-1.1 2.5z"></path>
+                        </svg>
+                    </div>
+                    <h4>Isi Freon</h4>
+                    <p>Pengisian freon sesuai standar pabrik untuk AC yang lebih dingin</p>
+                </div>
+
+                <div class="card service-card">
+                    <div class="icon-box" style="background: #e0f2fe; color: #0284c7;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20"></path>
+                            <path d="m17 5-5 5-5-5"></path>
+                            <path d="m17 19-5-5-5 5"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="m5 7 5 5-5 5"></path>
+                            <path d="m19 7-5 5 5 5"></path>
+                        </svg>
+                    </div>
+                    <h4>Perbaikan AC Tidak Dingin</h4>
+                    <p>Diagnosa dan perbaikan AC yang kurang dingin atau tidak dingin sama sekali</p>
+                </div>
+
+                <div class="card service-card">
+                    <div class="icon-box" style="background: #eef2ff; color: #4f46e5;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5z"></path>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 .6 1.65 1.65 0 0 0-.4 1V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 8.6 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-.6-1 1.65 1.65 0 0 0-1-.4H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 8.6a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-.6 1.65 1.65 0 0 0 .4-1V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 15.4 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.2.3.4.6.6 1h1a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </div>
+                    <h4>Bongkar Pasang AC</h4>
+                    <p>Jasa bongkar pasang AC untuk pindahan atau renovasi rumah</p>
+                </div>
+
+                <div class="card service-card">
+                    <div class="icon-box" style="background: #f5f3ff; color: #7c3aed;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 16.3c0 2 1.6 3.7 3.7 3.7s3.7-1.6 3.7-3.7c0-1.3-.7-2.4-1.5-3.4L10.7 10l-2.2 2.9C7.6 13.9 7 15 7 16.3z"></path>
+                            <path d="M13 8.3c0 1.5 1.2 2.7 2.7 2.7s2.7-1.2 2.7-2.7c0-.9-.5-1.8-1.1-2.5L15.7 4l-1.6 1.8c-.6.7-1.1 1.6-1.1 2.5z"></path>
+                        </svg>
+                    </div>
+                    <h4>Service AC Bocor</h4>
+                    <p>Perbaikan AC bocor dengan pengecekan menyeluruh sistem pendingin</p>
+                </div>
+
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="8" width="6" height="13" rx="1"></rect>
+                            <rect x="9" y="3" width="6" height="18" rx="1"></rect>
+                            <rect x="15" y="11" width="6" height="10" rx="1"></rect>
+                            <path d="M6 12h.01M12 7h.01M18 15h.01M12 11h.01M12 15h.01"></path>
+                        </svg>
+                    </div>
+                    <h4>Solusi Perawatan AC untuk Beragam Kebutuhan Properti</h4>
+                    <p>Perawatan rutin untuk rumah, apartemen, kos, kantor, toko, restoran, hotel, dan fasilitas lainnya</p>
+                </div>
+
+                <div class="card service-card">
+                    <div class="icon-box" style="background: #eef2ff; color: #4f46e5;">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 15.5A3.5 3.5 0 1 0 12 8a3.5 3.5 0 0 0 0 7.5z"></path>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 .6 1.65 1.65 0 0 0-.4 1V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 8.6 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-.6-1 1.65 1.65 0 0 0-1-.4H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 8.6a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-.6 1.65 1.65 0 0 0 .4-1V3a2 2 0 0 1 4 0v.09A1.65 1.65 0 0 0 15.4 4.6a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9c.2.3.4.6.6 1h1a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </div>
+                    <h4>Pemasangan AC</h4>
+                    <p>Layanan instalasi AC dari unit kami maupun unit dari Anda</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <button class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path>
+                    </svg>
+                    Konsultasi Gratis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Layanan -->
+    <section id="area">
+        <div class="container">
+            <div class="section-header">
+                <h3>Area Layanan Kami</h3>
+                <p>Melayani area Bantul, Yogyakarta dan sekitarnya</p>
+            </div>
+
+            <div class="area-panel">
+                <svg class="map-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <h4>Bantul, Yogyakarta dan Sekitarnya</h4>
+                <p>Tidak yakin area Anda tercover? Hubungi kami untuk konfirmasi!</p>
+                <button class="btn btn-primary" onclick="openWhatsApp()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path>
+                    </svg>
+                    Tanya Area Layanan
+                </button>
             </div>
         </div>
     </section>
@@ -698,34 +1189,43 @@
         <div class="container">
             <div class="section-header">
                 <h3 style="color: white;">Galeri Pekerjaan Kami</h3>
-                <p style="color: #bfdbfe;">Dokumentasi servis AC dari teknisi profesional kami</p>
+                <p style="color: #bfdbfe;">Dokumentasi maintenance & pemasangan oleh teknisi profesional dan berpengalaman kami</p>
             </div>
 
-            <div class="grid grid-cols-2 max-w-6xl" style="margin: 0 auto;">
-                <!-- Video -->
-                <div class="gallery-video">
-                    <video controls poster="assets/WhatsApp_Image_2026-04-17_at_18.50.09.jpeg">
-                        <source src="assets/WhatsApp_Video_2026-04-17_at_18.50.09.mp4" type="video/mp4">
-                        Browser Anda tidak mendukung video.
-                    </video>
-                </div>
-
-                <!-- Foto 1 -->
+            <div class="grid grid-cols-3 max-w-6xl" style="margin: 0 auto;">
                 <div class="gallery-img">
                     <img src="assets/WhatsApp_Image_2026-04-17_at_18.50.09.jpeg" alt="Teknisi servis AC indoor">
                     <div class="gallery-label">Servis AC Indoor</div>
                 </div>
 
-                <!-- Foto 2 -->
                 <div class="gallery-img">
                     <img src="assets/WhatsApp_Image_2026-04-17_at_18.50.10_(1).jpeg" alt="Teknisi membersihkan AC outdoor">
                     <div class="gallery-label">Pembersihan AC Outdoor</div>
                 </div>
 
-                <!-- Foto 3 -->
-                <div class="gallery-img" style="grid-column: span 2;">
-                    <img src="assets/WhatsApp_Image_2026-04-17_at_18.50.10.jpeg" alt="Teknisi service AC outdoor Samsung" style="height: 400px;">
+                <div class="gallery-img">
+                    <img src="assets/WhatsApp_Image_2026-04-17_at_18.50.10.jpeg" alt="Teknisi service AC outdoor Samsung">
                     <div class="gallery-label">Service AC Outdoor - Samsung</div>
+                </div>
+
+                <div class="gallery-img">
+                    <img src="assets/WhatsApp_Image_2026-04-30_at_20.33.06.jpeg" alt="Pemasangan unit AC outdoor">
+                    <div class="gallery-label">Pemasangan AC Outdoor</div>
+                </div>
+
+                <div class="gallery-img">
+                    <img src="assets/WhatsApp_Image_2026-04-30_at_20.37.54.jpeg" alt="Stok unit AC indoor dan outdoor">
+                    <div class="gallery-label">Stok Unit AC</div>
+                </div>
+
+                <div class="gallery-img">
+                    <img src="assets/WhatsApp_Image_2026-04-30_at_20.38.08.jpeg" alt="Koleksi unit AC indoor siap pasang">
+                    <div class="gallery-label">Unit AC Indoor Siap Pasang</div>
+                </div>
+
+                <div class="gallery-img gallery-wide">
+                    <img src="assets/WhatsApp_Image_2026-04-30_at_20.38.19.jpeg" alt="Peralatan dan toolbox servis AC profesional">
+                    <div class="gallery-label">Peralatan Servis AC Profesional</div>
                 </div>
             </div>
 
@@ -750,17 +1250,183 @@
         </div>
     </section>
 
-    <!-- Catalog Price List -->
-    <section class="bg-gray">
+    <!-- Kata Pelanggan Kami -->
+    <section id="testimoni" class="bg-gray">
         <div class="container">
             <div class="section-header">
-                <h3>Daftar Harga Layanan</h3>
-                <p>Katalog lengkap harga maintenance unit AC split</p>
+                <h3>Kata Pelanggan Kami</h3>
+                <p>Kepuasan pelanggan adalah bukti kualitas layanan kami</p>
             </div>
 
-            <div class="max-w-5xl">
-                <div style="background: white; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); overflow: hidden; border: 1px solid #e5e7eb;">
-                    <img src="assets/list.jpeg" alt="Price List Maintenance Unit AC Split" style="width: 100%; height: auto;">
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Pelayanan cepat dan profesional! AC di rumah saya jadi dingin lagi. Harga juga sangat terjangkau. Recommended!"</blockquote>
+                    <div class="testimonial-person">
+                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1738566061505-556830f8b8f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=160" alt="Budi Santoso">
+                        <div>
+                            <strong>Budi Santoso</strong>
+                            <span>Rumah Tangga</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Teknisinya ramah dan menjelaskan dengan detail masalah AC saya. Setelah diservis, AC langsung dingin maksimal. Terima kasih!"</blockquote>
+                    <div class="testimonial-person">
+                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1710488140888-88896ecafdcd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=160" alt="Siti Nurhaliza">
+                        <div>
+                            <strong>Siti Nurhaliza</strong>
+                            <span>Pemilik Kos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Sudah 3 kali pakai jasa mereka untuk servis AC di penginapan. Selalu puas! Responnya cepat dan hasilnya memuaskan."</blockquote>
+                    <div class="testimonial-person">
+                        <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1758691737605-69a0e78bd193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=160" alt="Agus Prasetyo">
+                        <div>
+                            <strong>Agus Prasetyo</strong>
+                            <span>Pemilik Penginapan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Harga Maintenance -->
+    <section id="harga">
+        <div class="container">
+            <div class="section-header">
+                <h3>HARGA MAINTENANCE UNIT AC SPLIT</h3>
+                <p>Harga terjangkau dan transparan untuk semua layanan</p>
+            </div>
+
+            <div class="max-w-6xl">
+                <div class="price-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jenis Layanan</th>
+                                <th>Harga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Cleaning cuci perawatan unit</strong>
+                                    <span style="display: block; color: #4b5563;">Standar AC 1/2 - 1 PK</span>
+                                </td>
+                                <td><span class="price">Rp 75.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Cleaning cuci perawatan unit</strong>
+                                    <span style="display: block; color: #4b5563;">1,5 - 2 PK</span>
+                                </td>
+                                <td><span class="price">Rp 100.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Bongkar pasang indoor + outdoor</strong>
+                                    <span style="display: block; color: #4b5563;">1/2 - 1 PK</span>
+                                </td>
+                                <td><span class="price">Rp 300.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Bongkar pasang indoor/outdoor</strong>
+                                    <span style="display: block; color: #4b5563;">1/2 - 1 PK</span>
+                                </td>
+                                <td><span class="price">Rp 200.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Isi freon full jenis R22</strong>
+                                    <span style="display: block; color: #4b5563;">Standar 1/2 - 1 PK</span>
+                                </td>
+                                <td><span class="price">Rp 300.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tambah freon jenis R22</strong></td>
+                                <td><span class="price">Rp 50.000/10 psi</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Isi freon full jenis R32</strong>
+                                    <span style="display: block; color: #4b5563;">Standar 1/2 - 1 PK</span>
+                                </td>
+                                <td><span class="price">Rp 400.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tambah freon jenis R32</strong></td>
+                                <td><span class="price">Rp 50.000/15 psi</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Isi freon full jenis R410</strong>
+                                    <span style="display: block; color: #4b5563;">Standar 1/2 - 1 PK</span>
+                                </td>
+                                <td><span class="price">Rp 400.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tambah freon jenis R410</strong></td>
+                                <td><span class="price">Rp 50.000/15 psi</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Over haul total indoor outdoor + blasing</strong></td>
+                                <td><span class="price">Rp 500.000/unit</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Pipa freon tembaga/meter</strong>
+                                    <span style="display: block; color: #4b5563;">Standar</span>
+                                </td>
+                                <td><span class="price">Rp 80.000/meter</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Pipa freon tembaga/meter</strong>
+                                    <span style="display: block; color: #4b5563;">Standar AC inverter</span>
+                                </td>
+                                <td><span class="price">Rp 100.000/meter</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Penggantian spare part rusak ringan</strong></td>
+                                <td><span class="price">Rp 100.000 - 200.000</span></td>
+                            </tr>
+                            <tr class="price-highlight">
+                                <td>
+                                    <strong style="font-size: 1.15rem;">Paket Terima Dingin AC Split Standar</strong>
+                                    <span style="display: block; color: #4b5563;">1/2 - 1 PK</span>
+                                    <em style="display: block; color: #6b7280; font-size: 0.9rem; margin-top: 0.35rem;">Meliputi: cuci cleaning, tambah/isi freon, pengecekan total indoor-outdoor</em>
+                                </td>
+                                <td>
+                                    <span style="display: inline-block; background: #22c55e; color: white; border-radius: 0.75rem; padding: 0.75rem 1rem;">
+                                        <span style="display: block; font-size: 0.75rem; font-weight: 700;">PAKET HEMAT</span>
+                                        <strong style="font-size: 1.35rem;">Rp 225.000/unit</strong>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="price-note">
+                    <div class="icon-box">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4>Catatan Penting:</h4>
+                        <p>Harga di atas <strong>sudah termasuk garansi 1 bulan</strong> dan untuk <strong>AC standar 1/2 - 1 PK non inverter</strong>.</p>
+                    </div>
                 </div>
 
                 <div class="text-center mt-8">
@@ -768,7 +1434,7 @@
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                         </svg>
-                        Tanya Harga & Pesan Sekarang
+                        Konsultasi & Pesan Sekarang
                     </button>
                 </div>
             </div>
@@ -843,8 +1509,38 @@
         </div>
     </section>
 
+    <!-- CTA Akhir -->
+    <section class="final-cta">
+        <div class="container">
+            <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#bfdbfe" stroke-width="2" style="margin-bottom: 1.5rem;">
+                <path d="M12 2v20"></path>
+                <path d="m17 5-5 5-5-5"></path>
+                <path d="m17 19-5-5-5 5"></path>
+                <path d="M2 12h20"></path>
+                <path d="m5 7 5 5-5 5"></path>
+                <path d="m19 7-5 5 5 5"></path>
+            </svg>
+            <h3>AC Bermasalah? Layanan Kami Siap Datang Kapan Pun dan Dimanapun</h3>
+            <p>Jangan biarkan AC rusak mengganggu kenyamanan Anda. Layanan kami selalu siap kapan saja untuk Anda.</p>
+            <div class="final-cta-actions">
+                <button class="btn btn-success btn-lg" onclick="openWhatsApp()">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path>
+                    </svg>
+                    Chat WhatsApp
+                </button>
+                <button class="btn btn-white btn-lg" onclick="openWhatsApp()">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Pesan Servis
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer>
+    <footer id="kontak">
         <div class="container">
             <div class="footer-grid">
                 <!-- Brand -->
@@ -857,17 +1553,56 @@
                         </div>
                     </div>
                     <p style="color: #6b7280; line-height: 1.6; margin-bottom: 1rem;">
-                        Melayani jasa servis AC panggilan di area Bantul dan sekitarnya dengan fokus pada kecepatan, ketelitian, dan kepuasan pelanggan.
+                        Melayani jasa servis panggilan AC di area Bantul, Yogyakarta dan sekitarnya dengan fokus pada kecepatan, ketelitian, dan kepuasan pelanggan.
                     </p>
+                    <div class="footer-social">
+                        <a href="https://wa.me/6287825019502" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/abadijaya.teknikac/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.406-1.683a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/share/18KEr2G9yP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:ardi.sustanto@gmail.com" aria-label="Email">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                <path d="m3 7 9 6 9-6"></path>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Kontak -->
                 <div>
                     <h5>Kontak</h5>
                     <ul>
-                        <li>📞 0878-2501-9502</li>
-                        <li>💬 WhatsApp: 0878-2501-9502</li>
-                        <li>📍 Jogahan, RT.03, Gaten, Canden, Kec. Jetis, Kabupaten Bantul, DIY 55781</li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" style="vertical-align: middle; margin-right: 0.35rem;">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            0878-2501-9502
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="vertical-align: middle; margin-right: 0.35rem;">
+                                <path d="M21 11.5a8.5 8.5 0 0 1-12.3 7.6L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"></path>
+                            </svg>
+                            WhatsApp: 0878-2501-9502
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" style="vertical-align: middle; margin-right: 0.35rem;">
+                                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Jogahan, RT.03, Gaten, Canden, Kec. Jetis, Kabupaten Bantul, DIY 55781
+                        </li>
                     </ul>
                 </div>
 
@@ -875,21 +1610,25 @@
                 <div>
                     <h5>Jam Operasional</h5>
                     <ul>
-                        <li>Senin - Sabtu: <strong style="color: white;">08.00 - 18.00</strong></li>
-                        <li>Minggu: <strong style="color: white;">09.00 - 15.00</strong></li>
+                        <li>Senin - Minggu: <strong style="color: white;">07.00 - 18.00</strong></li>
                     </ul>
                     <div style="margin-top: 1rem; background: #065f46; border: 1px solid #047857; border-radius: 0.5rem; padding: 0.75rem;">
                         <p style="color: #6ee7b7; font-size: 0.75rem; font-weight: 500;">
-                            ⏰ Layanan darurat tersedia
+                            Siap Melayani 24 Jam
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div style="border-top: 1px solid #374151; padding-top: 2rem; text-align: center;">
+            <div class="footer-bottom">
                 <p style="font-size: 0.875rem; color: #6b7280;">
-                    © 2025 Servis AC Bantul Yogyakarta. All rights reserved.
+                    &copy; 2025 Servis AC Bantul Yogyakarta. All rights reserved.
                 </p>
+                <div>
+                    <a href="#tentang">Tentang Kami</a>
+                    <a href="#layanan">Layanan</a>
+                    <a href="#kontak">Kontak</a>
+                </div>
             </div>
         </div>
     </footer>
