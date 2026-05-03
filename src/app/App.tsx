@@ -24,7 +24,7 @@ import { Card, CardContent } from './components/ui/card';
 import { Input } from './components/ui/input';
 import { Textarea } from './components/ui/textarea';
 import logoAC from '../imports/logo_ac.jpeg';
-import mapImage from '../imports/image-3.png';
+import mapImage from '../imports/map-abadi-jaya-teknik.png';
 import workImage1 from '../imports/WhatsApp_Image_2026-04-17_at_18.50.09.jpeg';
 import workImage2 from '../imports/WhatsApp_Image_2026-04-17_at_18.50.10_(1).jpeg';
 import workImage3 from '../imports/WhatsApp_Image_2026-04-17_at_18.50.10.jpeg';
@@ -56,7 +56,7 @@ export default function App() {
   };
 
   const handleLocationClick = () => {
-    window.open('https://maps.app.goo.gl/uQhoFSYnvEJdwS8K6', '_blank');
+    window.open('https://maps.app.goo.gl/VwNPQfcA1SFXaZp29', '_blank');
   };
 
   return (
