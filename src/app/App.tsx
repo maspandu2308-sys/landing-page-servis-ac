@@ -56,7 +56,7 @@ export default function App() {
   };
 
   const handleLocationClick = () => {
-    window.open('https://maps.app.goo.gl/VwNPQfcA1SFXaZp29', '_blank');
+    window.open('https://maps.app.goo.gl/uQhoFSYnvEJdwS8K6', '_blank');
   };
 
   return (
