@@ -32,6 +32,8 @@ import newWorkImage1 from '../imports/WhatsApp_Image_2026-04-30_at_20.33.06.jpeg
 import newWorkImage2 from '../imports/WhatsApp_Image_2026-04-30_at_20.37.54.jpeg';
 import newWorkImage3 from '../imports/WhatsApp_Image_2026-04-30_at_20.38.08.jpeg';
 import newWorkImage4 from '../imports/WhatsApp_Image_2026-04-30_at_20.38.19.jpeg';
+import newWorkImage5 from '../imports/WhatsApp_Image_2026-05-04_at_14.13.25.jpeg';
+import newWorkImage6 from '../imports/WhatsApp_Image_2026-05-04_at_14.12.38.jpeg';
 import priceListImage from '../imports/list.jpeg';
 
 export default function App() {
@@ -75,7 +77,7 @@ export default function App() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src={logoAC} alt="Servis AC Jogahan" className="h-12 w-12 object-contain rounded-lg" />
+              <img src={logoAC} alt="Servis AC Pedetan" className="h-12 w-12 object-contain rounded-lg" />
               <div>
                 <h1 className="font-bold text-xl text-blue-600">Servis AC Bantul Yogyakarta</h1>
                 <p className="text-xs text-gray-600">Bantul, Yogyakarta</p>
@@ -458,6 +460,28 @@ export default function App() {
             </div>
 
             {/* Foto 7 - Peralatan servis AC */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <img
+                src={newWorkImage5}
+                alt="Teknisi memasang unit AC outdoor Panasonic"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <p className="text-white font-medium">Pemasangan AC Outdoor Panasonic</p>
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <img
+                src={newWorkImage6}
+                alt="Servis dan pengecekan beberapa unit AC"
+                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <p className="text-white font-medium">Servis Banyak Unit AC</p>
+              </div>
+            </div>
+
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group md:col-span-2 lg:col-span-3">
               <img
                 src={newWorkImage4}
@@ -879,25 +903,27 @@ export default function App() {
               </div>
 
               {/* Map */}
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden self-start">
                 <div className="p-6 bg-blue-600 text-white">
                   <h4 className="font-bold text-xl mb-2">Lokasi Kami</h4>
                   <p className="text-blue-100 text-sm">
-                    Jogahan, RT.03, Gaten, Canden, Kec. Jetis, Kabupaten Bantul
+                    Pedetan, RT.03, Gaten, Canden, Kec. Jetis, Kabupaten Bantul
                   </p>
                 </div>
                 <div className="relative h-96 cursor-pointer" onClick={handleLocationClick}>
                   <img
                     src={mapImage}
-                    alt="Peta Lokasi Servis AC Jogahan"
+                    alt="Peta Lokasi Servis AC Pedetan"
                     className="w-full h-full object-cover"
                   />
                   <Button
-                    onClick={handleLocationClick}
+                    asChild
                     className="absolute bottom-4 left-4 bg-white text-blue-600 hover:bg-gray-100 shadow-lg"
                   >
+                    <a href="https://maps.app.goo.gl/uQhoFSYnvEJdwS8K6" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     <MapPin className="w-4 h-4 mr-2" />
                     Buka di Google Maps
+                    </a>
                   </Button>
                 </div>
               </div>
@@ -950,7 +976,7 @@ export default function App() {
             {/* Brand */}
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-4">
-                <img src={logoAC} alt="Servis AC Jogahan" className="h-12 w-12 object-contain rounded-lg" />
+                <img src={logoAC} alt="Servis AC Pedetan" className="h-12 w-12 object-contain rounded-lg" />
                 <div>
                   <h4 className="font-bold text-xl text-white">Servis AC Bantul Yogyakarta</h4>
                   <p className="text-sm text-gray-400">Solusi AC Terbaik Anda</p>
@@ -992,7 +1018,7 @@ export default function App() {
                 </li>
                 <li className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-red-400" />
-                  <span>Jogahan, RT.03, Gaten, Canden, Kec. Jetis, Kabupaten Bantul, DIY 55781</span>
+                  <span>Pedetan, RT.03, Gaten, Canden, Kec. Jetis, Kabupaten Bantul, DIY 55781</span>
                 </li>
               </ul>
             </div>
