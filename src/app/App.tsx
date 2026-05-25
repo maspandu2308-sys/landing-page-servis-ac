@@ -58,7 +58,7 @@ export default function App() {
   };
 
   const handleLocationClick = () => {
-    window.open('https://maps.app.goo.gl/uQhoFSYnvEJdwS8K6', '_blank');
+    window.open('https://maps.app.goo.gl/wpXXx6WpjDWMNks49', '_blank');
   };
 
   return (
@@ -920,7 +920,7 @@ export default function App() {
                     asChild
                     className="absolute bottom-4 left-4 bg-white text-blue-600 hover:bg-gray-100 shadow-lg"
                   >
-                    <a href="https://maps.app.goo.gl/uQhoFSYnvEJdwS8K6" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                    <a href="https://maps.app.goo.gl/wpXXx6WpjDWMNks49" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     <MapPin className="w-4 h-4 mr-2" />
                     Buka di Google Maps
                     </a>
